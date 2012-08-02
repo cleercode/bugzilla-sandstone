@@ -4,7 +4,7 @@ body {
     background: #f6f4ec;
     background-image: url(https://marketplace-cdn.addons.mozilla.net/media/img/mkt/grain.png), -moz-linear-gradient(top, #d7d3c8, #f6f4ec 400px);
     color: #404040;
-    min-width: 960px;
+    min-width: 990px;
 }
 
 body, td, th, input {
@@ -55,7 +55,7 @@ hr {
 #titles tbody {
     display: block;
     margin: 0 auto;
-    width: 960px;
+    width: 990px;
 }
 
 #header .subheader {
@@ -74,7 +74,7 @@ hr {
     color: #404040;
     margin: 0 auto;
     padding: 0 15px 5px;
-    width: 960px;
+    width: 990px;
 }
 
 .links a {
@@ -91,7 +91,7 @@ hr {
     color: #404040;
     margin: 100px auto 15px;
     padding: 0;
-    width: 960px;
+    width: 990px;
 }
 
 /* Home */
@@ -373,7 +373,7 @@ table.edit_form hr {
     border-radius: 0;
     color: #bbb;
     margin: 15px -15px 0;
-    padding: 48px 15px 15px;
+    padding: 48px 15px 20px;
 }
 
 #footer #useful-links {
@@ -385,7 +385,7 @@ table.edit_form hr {
     margin-right: auto;
     margin-left: auto;
     padding: 0 0 0 320px !important;
-    width: 640px;
+    width: 670px;
 }
 
 #footer #links-actions {
