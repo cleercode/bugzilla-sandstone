@@ -42,7 +42,7 @@ hr {
     margin: -15px;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 #titles {
@@ -442,4 +442,67 @@ table.edit_form hr {
 
 #flags label {
     font-weight: normal;
+}
+
+/* Tablet Portrait size to standard 990 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+    body {
+        min-width: 768px;
+    }
+  
+    #titles tbody, #header .links, #bugzilla-body {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 768px;
+    }
+
+    #footer > * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 448px;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        min-width: 480px;
+    }
+  
+    #titles tbody, #header .links, #bugzilla-body, #attachment_table, .bz_comment, #comment {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 480px !important;
+    }
+
+    #footer > * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 480px;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    body {
+        min-width: 320px;
+    }
+  
+    #titles tbody, #header .links, #bugzilla-body, #attachment_table, .bz_comment, #comment {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 320px !important;
+    }
+
+    #footer > * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 320px;
+    }
 }
