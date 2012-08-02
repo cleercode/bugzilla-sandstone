@@ -1,21 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Droid+Sans+Mono);
 
 body {
-    background: #f4f1e9;
-    color: #444;
+    background: #f6f4ec;
+    background-image: url(https://marketplace-cdn.addons.mozilla.net/media/img/mkt/grain.png), -moz-linear-gradient(top, #d7d3c8, #f6f4ec 400px);
+    color: #404040;
+    min-width: 960px;
 }
 
 body, td, th, input {
     font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-a, a:visited, a:hover {
-    color: #c13832;
+a, a:visited, #header a, #header a:visited, #footer a, #footer a:visited {
+    color: #0095dd;
 }
 
-a:hover {
-    border-bottom: 1px solid #ccc;
-    text-decoration: none !important;
+a:hover, #header a:hover, #footer a:hover {
+    color: #00539f;
 }
 
 textarea, input[type=text], .text_input {
@@ -34,17 +35,20 @@ hr {
 }
 
 #header {
+    background: -moz-linear-gradient(top, #e5e3dc, #ecebe5);
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     margin: -15px;
-    line-height: 2;
     position: fixed;
     width: 100%;
     z-index: 1;
 }
 
 #titles {
-    background: #c13832;
+    background: transparent;
     border-radius: 0;
-    color: #fff;
+    color: #404040;
     padding: 5px 15px;
 }
 
@@ -52,11 +56,6 @@ hr {
     display: block;
     margin: 0 auto;
     width: 960px;
-}
-
-#header {
-    background: #4d4e53;
-    border-radius: 0;
 }
 
 #header .subheader {
@@ -72,13 +71,13 @@ hr {
     background: transparent;
     border: none;
     border-radius: 0;
+    color: #404040;
     margin: 0 auto;
-    padding: 5px 15px;
+    padding: 0 15px 5px;
     width: 960px;
 }
 
 .links a {
-    color: #fff;
     margin-right: 8px;
 }
 
@@ -89,6 +88,7 @@ hr {
 #bugzilla-body {
     background: none;
     border: none;
+    color: #404040;
     margin: 100px auto 15px;
     padding: 0;
     width: 960px;
@@ -123,7 +123,7 @@ hr {
 /* Bugs */
 
 .navigation {
-    background: #e9e3d2;
+    background: rgba(255, 255, 255, 0.3);
     padding: 5px 10px;
 }
 
@@ -142,6 +142,7 @@ u {
     font-weight: normal;
     line-height: 32px;
     padding: 5px 0;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .bz_alias_short_desc_container b {
@@ -163,7 +164,8 @@ u {
 
 table.edit_form {
     background: #fff;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 10px 10px 80px;
     position: relative;
@@ -221,8 +223,10 @@ table.edit_form hr {
 
 #attachment_table {
     background: #fff;
-    border: 1px solid #ccc;
+    border: none;
     border-collapse: collapse;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
 
@@ -230,14 +234,9 @@ table.edit_form hr {
     border: none;
 }
 
-#attachment_table th {
+#attachment_table th, .bz_attach_footer, .bz_time_tracking_table th {
     background: #eee;
-    border-bottom: 1px solid #ccc;
-}
-
-.bz_attach_footer {
-    background: #eee;
-    border-top: 1px solid #ccc;
+    color: #404040;
 }
 
 .bz_comment {
@@ -262,7 +261,7 @@ table.edit_form hr {
     -moz-transition: all 0.25s linear 0s;
     -webkit-transition: all 0.25s linear 0s;
     transition: all 0.25s linear 0s;
-    background: #c13832;
+    background: #0095dd;
     color: #fff;
     font-weight: bold;
     padding: 5px;
@@ -272,8 +271,9 @@ table.edit_form hr {
     -moz-transition: all 0.25s linear 0s;
     -webkit-transition: all 0.25s linear 0s;
     transition: all 0.25s linear 0s;
-    background: #820;
+    background: #00539f;
     border: none;
+    text-decoration: none;
 }
 
 .new_user {
@@ -302,7 +302,8 @@ table.edit_form hr {
 
 .bz_comment_text {
     background: #fff;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     margin: 10px 0 0;
     padding: 10px;
     position: relative;
@@ -324,12 +325,6 @@ table.edit_form hr {
     left: 16px;
 }
 
-.bz_comment_text:before {
-    border-bottom-color: #ccc;
-    border-width: 9px;
-    left: 15px;
-}
-
 .bz_comment_text span.quote {
     background: #eee !important;
     color: #444 !important;
@@ -342,11 +337,13 @@ table.edit_form hr {
 
 .ih_inlinehistory {
     background: #eee;
-    border: 1px solid #ccc;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     padding: 10px;
     position: relative;
     top: -1px;
-    z-index: -1;
+    z-index: 1;
 }
 
 #add_comment {
@@ -370,6 +367,28 @@ table.edit_form hr {
 }
 
 #footer {
+    background: #fff;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    color: #bbb;
+    margin: 15px -15px 0;
+    padding: 48px 15px 15px;
+}
+
+#footer #useful-links {
+    background: url(https://www.mozilla.org/media/img/sandstone/footer-mozilla.png) no-repeat;
+    min-height: 24px;
+}
+
+#footer > * {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 0 0 320px !important;
+    width: 640px;
+}
+
+#footer #links-actions {
     display: none;
 }
 
