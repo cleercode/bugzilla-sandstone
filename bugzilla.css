@@ -74,7 +74,8 @@ hr {
     border-radius: 0;
     color: #404040;
     margin: 0 auto;
-    padding: 0 15px 5px;
+    padding: 0 165px 5px;
+    position: relative;
     width: 990px;
 }
 
@@ -94,6 +95,19 @@ hr {
 
 .links a {
     margin-right: 8px;
+}
+
+.links .form {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#quicksearch_top, #quicksearch_main {
+    -moz-box-sizing: border-box;
+    background: url(http://dl.dropbox.com/u/28610/bugzilla-prototype/search.png) 5px center no-repeat, -moz-linear-gradient(#fafafa, #fff);
+    padding-left: 26px;
+    width: 150px;
 }
 
 #find_top, .links .form a {
@@ -402,7 +416,7 @@ table.edit_form hr {
     border-radius: 0;
     color: #bbb;
     margin: 15px -15px 0;
-    padding: 48px 15px;
+    padding: 48px 15px 20px;
 }
 
 #footer #useful-links {
