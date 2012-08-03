@@ -3,6 +3,7 @@
 body {
     background: #f6f4ec;
     background-image: url(https://marketplace-cdn.addons.mozilla.net/media/img/mkt/grain.png), -moz-linear-gradient(top, #d7d3c8, #f6f4ec 400px);
+/*    background: #f9f9f9 url(https://mozillalabs.com/media/img/innovate/bg-tile.png) repeat-x;*/
     color: #404040;
     min-width: 990px;
 }
@@ -77,8 +78,26 @@ hr {
     width: 990px;
 }
 
+#titles {
+    display: none;
+}
+
+#header .links {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: url(http://dl.dropbox.com/u/28610/bugzilla-prototype/logo.png) no-repeat;
+    display: block;
+    margin: 10px auto;
+    min-height: 50px;
+    padding-left: 144px;
+}
+
 .links a {
     margin-right: 8px;
+}
+
+#find_top, .links .form a {
+    display: none !important;
 }
 
 .separator {
