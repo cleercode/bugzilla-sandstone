@@ -189,6 +189,10 @@ table.edit_form hr {
     font-weight: normal;
 }
 
+.field_value .text_input {
+    min-width: 0;
+}
+
 #bz_show_bug_column_1 tr:last-child span {
     position: absolute;
     left: 20px;
@@ -203,6 +207,11 @@ table.edit_form hr {
 
 .cc_list_display {
     background: #fff;
+    float: none;
+    font-size: 11px;
+    margin-top: 3px;
+    max-width: none;
+    padding: 5px;
 }
 
 #project-flags, #custom-flags {
@@ -260,6 +269,7 @@ table.edit_form hr {
 .bz_comment_user a {
     -moz-transition: all 0.25s linear 0s;
     -webkit-transition: all 0.25s linear 0s;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.25s linear 0s;
     background: #0095dd;
     color: #fff;
@@ -444,7 +454,7 @@ table.edit_form hr {
     font-weight: normal;
 }
 
-/* Tablet Portrait size to standard 990 (devices and browsers) */
+/* Tablet Portrait size to standard 990 */
 @media only screen and (min-width: 768px) and (max-width: 989px) {
     body {
         min-width: 768px;
@@ -465,13 +475,31 @@ table.edit_form hr {
     }
 }
 
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {
+    table.edit_form, table.edit_form > tbody > tr > td {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        display: block;
+        width: 100% !important;
+    }
+    
+    .bz_column_spacer {
+        width: auto;
+        height: 20px;
+    }
+}
+
+
+
+/* Mobile Landscape Size to Tablet Portrait */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     body {
         min-width: 480px;
     }
   
-    #titles tbody, #header .links, #bugzilla-body, #attachment_table, .bz_comment, #comment {
+    #titles tbody, #header .links, #bugzilla-body, #attachment_table,
+    .bz_comment, #add_comment > table, #comment {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -486,13 +514,14 @@ table.edit_form hr {
     }
 }
 
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+/* Mobile Portrait Size to Mobile Landscape Size */
 @media only screen and (max-width: 479px) {
     body {
         min-width: 320px;
     }
   
-    #titles tbody, #header .links, #bugzilla-body, #attachment_table, .bz_comment, #comment {
+    #titles tbody, #header .links, #bugzilla-body, #attachment_table,
+    .bz_comment, #add_comment > table, #comment {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
