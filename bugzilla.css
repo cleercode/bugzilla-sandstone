@@ -46,76 +46,109 @@ hr {
     z-index: 2;
 }
 
-#titles {
-    background: transparent;
-    border-radius: 0;
-    color: #404040;
-    padding: 5px 15px;
-}
-
-#titles tbody {
-    display: block;
-    margin: 0 auto;
-    width: 990px;
-}
-
 #header .subheader {
     text-align: left;
     padding-left: 10px;
 }
 
-#header #information {
-    display: none;
+#header .wrapper {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*background: url(http://dl.dropbox.com/u/28610/bugzilla-prototype/logo.png) no-repeat;*/
+    margin: 10px auto;
+    /*min-height: 50px;*/
+    /*padding-left: 144px;*/
+    width: 990px;
 }
+
+#header .wrapper:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 
 #header .links {
     background: transparent;
     border: none;
     border-radius: 0;
     color: #404040;
-    margin: 0 auto;
-    padding: 0 165px 5px;
+    padding: 0;
     position: relative;
-    width: 990px;
-}
-
-#titles {
-    display: none;
 }
 
 #header .links {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    background: url(http://dl.dropbox.com/u/28610/bugzilla-prototype/logo.png) no-repeat;
-    display: block;
-    margin: 10px auto;
-    min-height: 50px;
-    padding-left: 144px;
+    font-size: 14px;
+    width: auto;
+}
+
+.links.left {
+    float: left;
+}
+
+.links.right {
+    float: right;
 }
 
 .links a {
-    margin-right: 8px;
+    margin-right: 20px;
 }
 
-.links .form {
-    position: absolute;
-    right: 0;
-    top: 0;
+.links .home {
+    font-weight: bold;
 }
 
 #quicksearch_top, #quicksearch_main {
     -moz-box-sizing: border-box;
-    background: url(http://dl.dropbox.com/u/28610/bugzilla-prototype/search.png) 5px center no-repeat, -moz-linear-gradient(#fafafa, #fff);
+    background: url(search.png) 5px center no-repeat, -moz-linear-gradient(#fafafa, #fff);
     padding-left: 26px;
-    width: 150px;
+    width: 200px;
 }
 
-#find_top, .links .form a {
+#find_top {
     display: none !important;
 }
 
-.separator {
+.links .dropdown {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    display: inline-block;
+    padding: 4px 8px;
+    position: relative;
+}
+
+.links .dropdown .anchor {
+    background-image: url(dropdown.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 15px;
+}
+
+.links .dropdown ul {
+    background: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     display: none;
+    padding: 4px 8px;
+    position: absolute;
+    right: -1px;
+    top: 28px;
+}
+
+.links .dropdown:hover ul {
+    display: block;
+}
+
+.links .dropdown:hover {
+    border-bottom-right-radius: 0;
+}
+
+.links .dropdown li {
+    display: block;
 }
 
 #bugzilla-body {
@@ -431,10 +464,6 @@ table.edit_form hr {
     width: 670px;
 }
 
-#footer #links-actions {
-    display: none;
-}
-
 #commit, #commit_top {
     -moz-transition: all 0.25s linear 0s;
     -webkit-transition: all 0.25s linear 0s;
@@ -493,7 +522,7 @@ table.edit_form hr {
         min-width: 768px;
     }
   
-    #titles tbody, #header .links, #bugzilla-body {
+    #header .wrapper, #bugzilla-body {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -531,7 +560,7 @@ table.edit_form hr {
         min-width: 480px;
     }
   
-    #titles tbody, #header .links, #bugzilla-body, #attachment_table,
+    #header .wrapper, #bugzilla-body, #attachment_table,
     .bz_comment, #add_comment > table, #comment {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -553,7 +582,7 @@ table.edit_form hr {
         min-width: 320px;
     }
   
-    #titles tbody, #header .links, #bugzilla-body, #attachment_table,
+    #header .wrapper, #bugzilla-body, #attachment_table,
     .bz_comment, #add_comment > table, #comment {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;

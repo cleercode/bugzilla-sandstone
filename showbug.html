@@ -161,67 +161,36 @@ body {
         class="bugzilla-mozilla-org bz_bug bz_status_ASSIGNED bz_product_Toolkit bz_component_Themes bz_bug_771284 yui-skin-sam">
 
 
-
+<!-- BEGINNING OF HEADER EDITS -->
 <div id="header">
-<div id="banner">
-  </div>
-
-<table border="0" cellspacing="0" cellpadding="0" id="titles">
-<tr>
-    <td id="title">
-      <p>Bugzilla@Mozilla &ndash; Bug&nbsp;771284</p>
-    </td>
-
-    <td id="subtitle">
-      <p class="subheader">Use light coloring for Mac OS X arrow panels</p>
-    </td>
-
-    <td id="information">
-      <p class="header_addl_info">Last modified: 2012-08-02 17:02:46 PDT</p>
-    </td>
-</tr>
-</table>
-
-<table id="lang_links_container" cellpadding="0" cellspacing="0"
-       class="bz_default_hidden"><tr><td>
-</td></tr></table>
-<ul class="links">
-  <li><a href="./">Home</a></li>
-  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
-  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
-  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
-
-  <li class="form">
-    <span class="separator">| </span>
-    <form action="buglist.cgi" method="get"
-        onsubmit="if (this.quicksearch.value == '')
-                  { alert('Please enter one or more search terms first.');
-                    return false; } return true;">
-    <input class="txt" type="text" id="quicksearch_top" name="quicksearch" 
-           value="">
-    <input class="btn" type="submit" value="Search" 
-           id="find_top"></form>
-  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
-
-  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
-
-  <li>
-      <span class="separator">| </span>
-        <a href="request.cgi?requester=chlee%40mozilla.com&amp;requestee=chlee%40mozilla.com&amp;do_union=1&amp;group=type&amp;action=queue">My Requests</a></li>
-
-    <li><span class="separator">| </span><a href="userprefs.cgi">Preferences</a></li>
-      <li><span class="separator">| </span><a href="admin.cgi">Administration</a></li>
-<li>
-        <span class="separator">| </span>
-        <a href="http://www.bugzilla.org/docs/4.0/en/html/bug_page.html" target="_blank">Help</a>
+  <div class="wrapper">
+    <ul class="links left">
+      <li class="home"><a href="./">Bugzilla@Mozilla</a></li>
+      <li><a href="enter_bug.cgi">New</a></li>
+      <li><a href="describecomponents.cgi">Browse</a></li>
+      <li class="form">
+      <form action="buglist.cgi" method="get" onsubmit="if (this.quicksearch.value == '') { alert('Please enter one or more search terms first.'); return false; } return true;">
+        <input class="txt" type="text" id="quicksearch_top" name="quicksearch" value="" placeholder="Search bugs">
+        <input class="btn" type="submit" value="Search" id="find_top">
+      </form>
+    </ul>
+    <ul class="links right">
+      <li><a href="http://buglist.cgi/?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailassigned_to1=1&emailreporter1=1&emailtype1=exact&email1=chlee%40mozilla.com&field0-0-0=bug_status&type0-0-0=notequals&value0-0-0=UNCONFIRMED&field0-0-1=reporter&type0-0-1=equals&value0-0-1=chlee%40mozilla.com">My Bugs</a></li>
+      <li><a href="userprefs.cgi">Preferences</a></li>
+      <li class="dropdown">
+        <span class="anchor">chlee&#64;mozilla.com</span>
+        <ul>
+          <li><a href="report.cgi">Reports</a></li>
+          <li><a href="request.cgi?requester=chlee%40mozilla.com&amp;requestee=chlee%40mozilla.com&amp;do_union=1&amp;group=type&amp;action=queue">My Requests</a></li>
+          <li><a href="admin.cgi">Administration</a></li>
+          <li><a href="http://www.bugzilla.org/docs/4.0/en/html/bug_page.html" target="_blank">Help</a></li>
+          <li><a href="index.cgi?logout=1">Log&nbsp;out</a></li>
+        </ul>
       </li>
-
-    <li>
-      <span class="separator">| </span>
-        <a href="index.cgi?logout=1">Log&nbsp;out</a>
-        chlee&#64;mozilla.com</li>
-</ul>
-</div> 
+    </ul>
+  </div>
+</div>
+<!-- END OF HEADER EDITS -->
 
 <div id="bugzilla-body">
 
@@ -8317,39 +8286,24 @@ Oops, forgot to include new images in previous patches. Previous comments/questi
 <ul id="useful-links">
   <li id="links-actions"><ul class="links">
   <li><a href="./">Home</a></li>
-  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
-  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
-  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
-
-  <li class="form">
-    <span class="separator">| </span>
-    <form action="buglist.cgi" method="get"
-        onsubmit="if (this.quicksearch.value == '')
-                  { alert('Please enter one or more search terms first.');
-                    return false; } return true;">
-    <input class="txt" type="text" id="quicksearch_bottom" name="quicksearch" 
-           value="">
-    <input class="btn" type="submit" value="Search" 
-           id="find_bottom"></form>
-  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
-
-  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+  <li><a href="enter_bug.cgi">New</a></li>
+  <li><a href="describecomponents.cgi">Browse</a></li>
+  <li><a href="query.cgi">Search</a></li>
+  <li><a href="report.cgi">Reports</a></li>
 
   <li>
-      <span class="separator">| </span>
         <a href="request.cgi?requester=chlee%40mozilla.com&amp;requestee=chlee%40mozilla.com&amp;do_union=1&amp;group=type&amp;action=queue">My Requests</a></li>
 
-    <li><span class="separator">| </span><a href="userprefs.cgi">Preferences</a></li>
-      <li><span class="separator">| </span><a href="admin.cgi">Administration</a></li>
+    <li><a href="userprefs.cgi">Preferences</a></li>
+      <li><a href="admin.cgi">Administration</a></li>
 <li>
-        <span class="separator">| </span>
+        
         <a href="http://www.bugzilla.org/docs/4.0/en/html/bug_page.html" target="_blank">Help</a>
       </li>
 
     <li>
-      <span class="separator">| </span>
-        <a href="index.cgi?logout=1">Log&nbsp;out</a>
-        chlee&#64;mozilla.com</li>
+      
+        <a href="index.cgi?logout=1">Log&nbsp;out</a></li>
 </ul>
   </li>
 
