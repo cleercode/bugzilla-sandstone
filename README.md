@@ -1,0 +1,3 @@
+# Bugzilla Sandstone
+
+This is a CSS/light HTML redesign for [Bugzilla@Mozilla](https://bugzilla.mozilla.org/) in the [Mozilla Sandstone](http://mozilla.seanmartell.com/guide/index.php?directory=.&currentPic=27) style. Most of the redesign is contained within `bugzilla.css`. `showbug.html` is a static, copy-pasted version of the rendered source of a Bugzilla@Mozilla `show_bug.cgi` page with HTML modifications made to the header (modified areas marked by HTML comments). Note that the CSS includes some pretty ugly workarounds to modify the page without using HTML. Someone should probably just rewrite the HTML someday.
