@@ -169,10 +169,12 @@ body {
       <li><a href="enter_bug.cgi">New</a></li>
       <li><a href="describecomponents.cgi">Browse</a></li>
       <li class="form">
-      <form action="buglist.cgi" method="get" onsubmit="if (this.quicksearch.value == '') { alert('Please enter one or more search terms first.'); return false; } return true;">
-        <input class="txt" type="text" id="quicksearch_top" name="quicksearch" value="" placeholder="Search bugs">
-        <input class="btn" type="submit" value="Search" id="find_top">
-      </form>
+        <form action="buglist.cgi" method="get" onsubmit="if (this.quicksearch.value == '') { alert('Please enter one or more search terms first.'); return false; } return true;">
+          <input class="txt" type="text" id="quicksearch_top" name="quicksearch" value="" placeholder="Search bugs">
+          <input class="btn" type="submit" value="Search" id="find_top">
+        </form>
+        <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">?</a>
+      </li>
     </ul>
     <ul class="links right">
       <li><a href="http://buglist.cgi/?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailassigned_to1=1&emailreporter1=1&emailtype1=exact&email1=chlee%40mozilla.com&field0-0-0=bug_status&type0-0-0=notequals&value0-0-0=UNCONFIRMED&field0-0-1=reporter&type0-0-1=equals&value0-0-1=chlee%40mozilla.com">My Bugs</a></li>
@@ -180,6 +182,7 @@ body {
       <li class="dropdown">
         <span class="anchor">chlee&#64;mozilla.com</span>
         <ul>
+          <li><a href="query.cgi">Search</a></li>
           <li><a href="report.cgi">Reports</a></li>
           <li><a href="request.cgi?requester=chlee%40mozilla.com&amp;requestee=chlee%40mozilla.com&amp;do_union=1&amp;group=type&amp;action=queue">My Requests</a></li>
           <li><a href="admin.cgi">Administration</a></li>
