@@ -2,9 +2,7 @@
 
 body {
     background: #f6f4ec;
-    background-image: url(noise.png), -moz-linear-gradient(#d7d3c8, #f6f4ec 400px);
-    background-image: url(noise.png), -webkit-linear-gradient(#d7d3c8, #f6f4ec 400px);
-    background-image: url(noise.png), linear-gradient(#d7d3c8, #f6f4ec 400px);
+    background: url(bg.png) repeat-x #f5f1e8;
     color: #404040;
     min-width: 990px;
 }
@@ -14,11 +12,11 @@ body, td, th, input {
 }
 
 a, a:visited, #header a, #header a:visited, #footer a, #footer a:visited {
-    color: #0095dd;
+    color: #af3232;
 }
 
 a:hover, #header a:hover, #footer a:hover {
-    color: #00539f;
+    color: #872727;
 }
 
 textarea, input[type=text], .text_input {
@@ -370,7 +368,7 @@ table.edit_form hr {
     transition: all 0.25s linear 0s;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.25s linear 0s;
-    background: #0095dd;
+    background: #af3232;
     color: #fff;
     font-weight: bold;
     padding: 5px;
@@ -380,7 +378,7 @@ table.edit_form hr {
     -moz-transition: all 0.25s linear 0s;
     -webkit-transition: all 0.25s linear 0s;
     transition: all 0.25s linear 0s;
-    background: #00539f;
+    background: #872727;
     border: none;
     text-decoration: none;
 }
